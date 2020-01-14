@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数接收参数并弹出</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #text2 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="text1" value="北京市">
+    <input type="text" id="text2" value="朝阳区">
+    <button onclick="openAlert()">传参</button>
+    <script>
+        function openAlert() {
+            alert(text1.value)
+            alert(text2.value)
+        }
+    </script>
+</body>
+
+</html>
