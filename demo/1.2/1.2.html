@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网页换肤</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        ul {
+            padding: 0;
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            width: 80px;
+            line-height: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        button {
+            width: 15px;
+            height: 15px;
+            outline: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0 5px;
+        }
+
+        .buttons {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buttons">
+        <button class="red" onclick="switchStyle('red')"></button>
+        <button class="green" onclick="switchStyle('green')"></button>
+        <button class="black" onclick="switchStyle('black')"></button>
+    </div>
+    <nav>
+        <ul>
+            <li>新闻</li>
+            <li>娱乐</li>
+            <li>体育</li>
+            <li>电影</li>
+            <li>音乐</li>
+            <li>旅游</li>
+        </ul>
+    </nav>
+    <script>
+        // @@ 初始化默认样式表
+        let baseLink = document.createElement('link')
+        baseLink.setAttribute('rel', 'stylesheet')
+        baseLink.setAttribute('type', 'text/css')
+        baseLink.setAttribute('href', 'style/green.css')
+        document.head.appendChild(baseLink)
+
+        // @@ 点击切换皮肤
+        function switchStyle(type) {
+            if (type === 'red') {
+                baseLink.setAttribute('href', 'style/red.css')
+            } else if (type === 'green') {
+                baseLink.setAttribute('href', 'style/green.css')
+            } else {
+                baseLink.setAttribute('href', 'style/black.css')
+            }
+        }
+    </script>
+</body>
+
+</html>
