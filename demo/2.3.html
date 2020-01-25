@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>求出数组中所有数字的和</title>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    button {
+        display: block;
+        margin: 5px 0;
+    }
+    #nums {
+        width: 200px;
+    }
+    .text {
+        font-size: 14px;
+        color: #999;
+    }
+    #isShow {
+        font-size: 26px;
+        font-weight: bold;
+        color: red;
+    }
+    </style>
+</head>
+<body>
+<div class="box">
+    <label>
+        <input type="text" id="nums">
+        <span class='text'>输入数字求和，数字之间用半角','号分隔</span>
+        <button id="sum">求和</button>
+        <span id="isShow"></span>
+    </label>
+</div>    
+<script>
+let nums = document.getElementById('nums')
+let sum = document.getElementById('sum')
+let isShow = document.getElementById('isShow')
+sum.onclick = function() {
+   isShow.innerHTML =  nums.value.split(',').reduce((prev, curr) => prev + parseInt(curr), 0)
+}
+</script>
+</body>
+</html>
