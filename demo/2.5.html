@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数传参，改变 Div 任意属性</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .btns {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <label>属性名：<input type="text" id="name"></label>
+    <label>属性值：<input type="text" id="val"></label>
+    <div class="btns">
+        <button onclick="define()">确定</button>
+        <button>重置</button>
+    </div>
+    <div id="box">
+        在上方输入框输入'属性名'及'属性值'，点击确定按钮查看效果
+    </div>
+    <script>
+        let name = document.getElementById('name')
+        let val = document.getElementById('val')
+        let box = document.getElementById('box')
+
+        function define() {
+            box.style[name.value] = val.value
+        }
+    </script>
+</body>
+
+</html>
