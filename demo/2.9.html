@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>单一按钮显示/隐藏</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 200px;
+        }
+
+        .header {
+            background-color: #ced3d7;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+
+        #body {
+            font-size: 12px;
+            background-color: #ddd;
+        }
+
+        #triangle {
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-top: 6px solid #57646E;
+        }
+
+        #triangle:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            <span>播放列表...</span>
+            <span id="triangle" onclick="isShow()"></span>
+        </div>
+        <div id="body">
+            <ul>
+                <li>玩家之徒 - 蔡依林</li>
+                <li>原谅我就是这样的女生 - 戴佩妮</li>
+                <li>猜不透 - 丁当</li>
+                <li>自导自演 - 周杰伦</li>
+                <li>浪漫窝 - 弦子</li>
+                <li>流年 - 王菲</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let triangle = document.getElementById('triangle')
+        let body = document.getElementById('body')
+        let show = true
+        function isShow() {
+            if (show) {
+                triangle.style.borderBottom = '6px solid #57646E'
+                triangle.style.borderTop = 'none'
+                body.style.display = 'none'
+                show = false
+            } else {
+                triangle.style.borderBottom = 'none'
+                triangle.style.borderTop = '6px solid #57646E'
+                body.style.display = 'block'
+                show = true
+            }
+        }
+    </script>
+</body>
+
+</html>
