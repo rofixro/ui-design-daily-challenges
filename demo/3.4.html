@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>输入两个数字，比较大小</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        button,
+        .vs {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" id="one"><span class="vs">vs</span><input type="number" id="two">
+    <button onclick="maxNum()">最大的数字是>>></button><span id="text">?</span>
+    <script>
+        let one = document.getElementById('one')
+        let two = document.getElementById('two')
+        let text = document.getElementById('text')
+        function maxNum() {
+            if (parseInt(one.value) > parseInt(two.value)) {
+                text.textContent = one.value
+            } else {
+                text.textContent = two.value
+            }
+        }
+    </script>
+</body>
+
+</html>
