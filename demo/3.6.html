@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>判断数字是否为两位数</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" id="enter"><button onclick="isDoubleDigit()">是否为两位数</button><span id="text"></span>
+    <script>
+        let enter = document.getElementById("enter")
+        let text = document.getElementById('text')
+        function isDoubleDigit() {
+            if (enter.value.length > 2) {
+                text.textContent = '不是'
+            } else {
+                text.textContent = '是'
+            }
+        } 
+    </script>
+</body>
+
+</html>
