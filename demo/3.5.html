@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页面加载后累加，自加1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        span {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <span>1</span>
+    <script>
+        let num = document.getElementsByTagName('span')[0]
+        window.onload = function () {
+            window.setInterval(function () {
+                num.textContent = parseInt(num.textContent) + 1
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>
