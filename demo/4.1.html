@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>setTimeout应用</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-color: #30A6E6;
+        }
+
+        li {
+            padding: 20px 30px;
+            position: relative;
+            color: #fff;
+            list-style: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        li>div {
+            position: absolute;
+            top: 68px;
+            display: none;
+            background-color: #30A6E6;
+        }
+
+        li>div>p {
+            float: left;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <span>Home</span>
+                <div>
+                    <p>text1</p>
+                    <p>text1</p>
+                    <p>text1</p>
+                    <p>text1</p>
+                    <p>text1</p>
+                </div>
+            </li>
+            <li>
+                <span>About Me</span>
+                <div>
+                    <p>text2</p>
+                    <p>text2</p>
+                    <p>text2</p>
+                    <p>text2</p>
+                    <p>text2</p>
+                    <p>text2</p>
+                    <p>text2</p>
+                </div>
+            </li>
+            <li>
+                <span>Articles on HTML5 & CSS3</span>
+                <div>
+                    <p>text3</p>
+                    <p>text3</p>
+                    <p>text3</p>
+                    <p>text3</p>
+                    <p>text3</p>
+                    <p>text3</p>
+                    <p>text3</p>
+                </div>
+            </li>
+            <li>
+                <span>News</span>
+                <div>
+                    <p>text4</p>
+                    <p>text4</p>
+                    <p>text4</p>
+                    <p>text4</p>
+                    <p>text4</p>
+                    <p>text4</p>
+                    <p>text4</p>
+                </div>
+            </li>
+            <li>
+                <span>Contact Us</span>
+                <div>
+                    <p>text5</p>
+                    <p>text5</p>
+                    <p>text5</p>
+                    <p>text5</p>
+                    <p>text5</p>
+                    <p>text5</p>
+                    <p>text5</p>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        let lis = document.getElementsByTagName('li')
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].onmouseenter = () => {
+                lis[i].getElementsByTagName('div')[0].style.display = 'flex'
+            }
+
+            lis[i].onmouseleave = () => {
+                timer = setTimeout(() => {
+                    lis[i].getElementsByTagName('div')[0].style.display = 'none'
+                }, 300)
+            }
+        }
+
+        // @@ 移动到子元素也会触发 onmouseout 事件
+    </script>
+</body>
+
+</html>
