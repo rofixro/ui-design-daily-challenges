@@ -5,96 +5,258 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>原生 JavaScript 练习</title>
+    <title>JavaScript Exercise</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Rubik:300,500,700');
+        @import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600');
+
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            color: #121314;
+            font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #f0f0f0;
+            font-weight: 400;
+            font-size: 2.5em;
+            margin: 0.5em 0;
+            transition: color 0.5s ease-in-out;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        span {
+            font-size: 6em;
+            color: #f0f0f0;
+            position: absolute;
+            top: 50%;
+            right: -16px;
+            transform: translateY(-50%);
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        ol {
+            margin-right: 10px;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        a {
+            font-size: 1em;
+            font-weight: 300;
+            line-height: 1.6;
+            text-decoration: none;
+            color: #121314;
+            position: relative;
+        }
+
+        a:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 100%;
+            left: -0.1em;
+            right: -0.1em;
+            bottom: 0;
+            transition: top 200ms cubic-bezier(0, .8, .13, 1);
+            background-color: rgba(79, 192, 141, 0.5);
+        }
+
+        a:hover:after {
+            top: 50%;
+        }
+
+        .accordion__box {
+            margin-top: 5vw;
+        }
+
+        .accordion__item {
+            width: 6vw;
+            height: 20vw;
+            border: 1px solid #EDEFEF;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .accordion__item:hover {
+            width: 20vw;
+        }
+
+        .accordion__item:hover ol {
+            opacity: 1;
+        }
+
+        .accordion__item:nth-child(1n) {
+            border-right: none;
+        }
+
+        .accordion__item:last-child {
+            border-right: 1px solid #EDEFEF;
+        }
+    </style>
 </head>
 
 <body>
-    <ol>
-        <li>
-            <a href="/demo/1.1.html">控制 DIV 属性</a>
-        </li>
-        <li>
-            <a href="/demo/1.2/1.2.html">网页换肤</a>
-        </li>
-        <li>
-            <a href="/demo/1.3.html">函数接收参数并弹出</a>
-        </li>
-        <li>
-            <a href="/demo/1.4.html">用循环将三个DIV变成红色</a>
-        </li>
-        <li>
-            <a href="/demo/1.5.html">鼠标移入/移出改变样式</a>
-        </li>
-        <li>
-            <a href="/demo/1.6.html">记住密码提示框</a>
-        </li>
-        <li>
-            <a href="/demo/2.1.html">百度输入法</a>
-        </li>
-        <li>
-            <a href="/demo/2.2.html">点击 Div，显示其 innerHTML</a>
-        </li>
-        <li>
-            <a href="/demo/2.3.html">求出数组中所有数字的和</a>
-        </li>
-        <li>
-            <a href="/demo/2.4.html">弹出层效果</a>
-        </li>
-        <li>
-            <a href="/demo/2.5.html">函数传参，改变 Div 任意属性</a>
-        </li>
-        <li>
-            <a href="/demo/2.6.html">图片列表：鼠标移入/移出改变图片透明度</a>
-        </li>
-        <li>
-            <a href="/demo/2.7.html">简易选项卡</a>
-        </li>
-        <li>
-            <a href="/demo/2.8.html">简易JS年历</a>
-        </li>
-        <li>
-            <a href="/demo/2.9.html">单一按钮显示/隐藏</a>
-        </li>
-        <li>
-            <a href="/demo/2.10.html">提示框效果</a>
-        </li>
-        <li>
-            <a href="/demo/2.11.html">鼠标移过，改变图片路径</a>
-        </li>
-        <li>
-            <a href="/demo/2.12.html">复选框</a>
-        </li>
-        <li>
-            <a href="/demo/3.1.html">用 typeof 查看数据类型</a>
-        </li>
-        <li>
-            <a href="/demo/3.2.html">用 parseInt 解析数字，并求和</a>
-        </li>
-        <li>
-            <a href="/demo/3.3.html">累加按钮，自加1</a>
-        </li>
-        <li>
-            <a href="/demo/3.4.html">输入两个数字，比较大小</a>
-        </li>
-        <li>
-            <a href="/demo/3.5.html">页面加载后累加，自加1</a>
-        </li>
-        <li>
-            <a href="/demo/3.6.html">判断数字是否为两位数</a>
-        </li>
-        <li>
-            <a href="/demo/3.7.html">简易网页计算器</a>
-        </li>
-        <li>
-            <a href="/demo/3.8.html">简易网页时钟</a>
-        </li>
-        <li>
-            <a href="/demo/3.9.html">倒计时</a>
-        </li>
-        <li>
-            <a href="/demo/4.1.html">setTimeout应用</a>
-        </li>
-    </ol>
+    <div class="accordion__box">
+        <h1 id="title">JavaScript Exercise</h1>
+        <ul class="accordion">
+            <li class="accordion__item">
+                <span>1</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">控制 DIV 属性</a></li>
+                    <li><a href="/src/lesson1/01.html">网页换肤</a></li>
+                    <li><a href="/src/lesson1/01.html">函数接收参数并弹出</a></li>
+                    <li><a href="/src/lesson1/01.html">用循环将三个 DIV 变成红色</a></li>
+                    <li><a href="/src/lesson1/01.html">鼠标移入/移出改变样式</a></li>
+                    <li><a href="/src/lesson1/01.html">记住密码提示框</a></li>
+                </ol>
+            </li>
+            <li class="accordion__item">
+                <span>2</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">百度输入法</a></li>
+                    <li><a href="/src/lesson1/01.html">点击 DIV，显示其innerHTML</a></li>
+                    <li><a href="/src/lesson1/01.html">求出数组中所有数字的和</a></li>
+                    <li><a href="/src/lesson1/01.html">弹出层效果</a></li>
+                    <li><a href="/src/lesson1/01.html">函数传参，改变 DIV 任意属性的值</a></li>
+                    <li><a href="/src/lesson1/01.html">图片列表：鼠标移入/移出改变图片透明度</a></li>
+                    <li><a href="/src/lesson1/01.html">简易选项卡</a></li>
+                    <li><a href="/src/lesson1/01.html">简易 JS 年历</a></li>
+                    <li><a href="/src/lesson1/01.html">单一按钮显示/隐藏-播放列表收缩展开</a></li>
+                    <li><a href="/src/lesson1/01.html">提示框效果</a></li>
+                    <li><a href="/src/lesson1/01.html">鼠标移过，修改图片路径</a></li>
+                    <li><a href="/src/lesson1/01.html">复选框（checkbox）全选/全不选/反选</a></li>
+                </ol>
+            </li>
+            <li class="accordion__item">
+                <span>3</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">用 typeof 查看数据类型</a></li>
+                    <li><a href="/src/lesson1/01.html">用 ParseInt 解析数字，并求和</a></li>
+                    <li><a href="/src/lesson1/01.html">累加按钮，自加1</a></li>
+                    <li><a href="/src/lesson1/01.html">输入两个数字，比较大小</a></li>
+                    <li><a href="/src/lesson1/01.html">页面加载后累加，自加1</a></li>
+                    <li><a href="/src/lesson1/01.html">判断数字是否为两位数</a></li>
+                    <li><a href="/src/lesson1/01.html">网页计算器</a></li>
+                    <li><a href="/src/lesson1/01.html">简易网页时钟</a></li>
+                    <li><a href="/src/lesson1/01.html">倒计时时钟（100秒）</a></li>
+                </ol>
+            </li>
+            <li class="accordion__item">
+                <span>4</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">setTimeout 应用</a></li>
+                    <li><a href="/src/lesson1/01.html">自动播放-幻灯片效果</a></li>
+                    <li><a href="/src/lesson1/01.html">自动改变方向-幻灯片效果</a></li>
+                    <li><a href="/src/lesson1/01.html">agruments 应用-求出函数参数的总合</a></li>
+                    <li><a href="/src/lesson1/01.html">css 函数-设置/读取对象的属性</a></li>
+                    <li><a href="/src/lesson1/01.html">当前输入框高亮显示</a></li>
+                    <li><a href="/src/lesson1/01.html">数组练习：各种数组方法的使用</a></li>
+                    <li><a href="/src/lesson1/01.html">事件练习：封装兼容性添加、删除事件的函数</a></li>
+                    <li><a href="/src/lesson1/01.html">星级评分系统</a></li>
+                </ol>
+            </li>
+            <li class="accordion__item">
+                <span>5</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">模拟 select 控件</a></li>
+                    <li><a href="/src/lesson1/01.html">点击页面，显示单击的坐标</a></li>
+                    <li><a href="/src/lesson1/01.html">用户按下键盘，显示 keyCode</a></li>
+                    <li><a href="/src/lesson1/01.html">阻止右键菜单（阻止默认事件）</a></li>
+                    <li><a href="/src/lesson1/01.html">跟随鼠标移动（大图展示）</a></li>
+                    <li><a href="/src/lesson1/01.html">自定义右键菜单</a></li>
+                    <li><a href="/src/lesson1/01.html">用键盘控制 DIV</a></li>
+                    <li><a href="/src/lesson1/01.html">DIV 闪烁</a></li>
+                </ol>
+            </li>
+            <li class="accordion__item">
+                <span>6</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">完美拖拽</a></li>
+                    <li><a href="/src/lesson1/01.html">防腾讯微博效果</a></li>
+                    <li><a href="/src/lesson1/01.html">自定义多级右键菜单</a></li>
+                </ol>
+            </li>
+
+            <li class="accordion__item">
+                <span>7</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">自动轮播广告（缓冲效果）</a></li>
+                    <li><a href="/src/lesson1/01.html">图片切换（Loading效果）</a></li>
+                    <li><a href="/src/lesson1/01.html">移动效果（按轨迹移动）</a></li>
+                </ol>
+            </li>
+            <li class="accordion__item">
+                <span>8</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">iPhone 手机解锁效果</a></li>
+                    <li><a href="/src/lesson1/01.html">自定义滚动条</a></li>
+                    <li><a href="/src/lesson1/01.html">拖拽-Clone</a></li>
+                    <li><a href="/src/lesson1/01.html">拖拽并可以改变大小</a></li>
+                </ol>
+            </li>
+            <li class="accordion__item">
+                <span>9</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">仿苹果电脑任务栏菜单</a></li>
+                    <li><a href="/src/lesson1/01.html">拼图小游戏</a></li>
+                    <li><a href="/src/lesson1/01.html">模拟表单控件</a></li>
+                </ol>
+            </li>
+            <li class="accordion__item">
+                <span>10</span>
+                <ol>
+                    <li><a href="/src/lesson1/01.html">为数组添加方法（求和，最大值）</a></li>
+                    <li><a href="/src/lesson1/01.html">自动轮播广告（面对对象版）</a></li>
+                    <li><a href="/src/lesson1/01.html">运动框架（面对对象版）</a></li>
+                    <li><a href="/src/lesson1/01.html">照片墙-多实例演示（面对对象版）</a></li>
+                    <li><a href="/src/lesson1/01.html">拖拽库（面对对象版）</a></li>
+                    <li><a href="/src/lesson1/01.html">无缝滚动（面对对象版）</a></li>
+                    <li><a href="/src/lesson1/01.html">延时加载（面对对象版）</a></li>
+                    <li><a href="/src/lesson1/01.html">仿腾讯游戏《英雄杀》官网 Flash 效果</a></li>
+                    <li><a href="/src/lesson1/01.html">百度有啊通栏展示效果</a></li>
+                    <li><a href="/src/lesson1/01.html">放烟花效果（面对对象版）</a></li>
+                    <li><a href="/src/lesson1/01.html">《穿越火线》官网导航菜单</a></li>
+                    <li><a href="/src/lesson1/01.html">《百度风云榜》TAB 切换</a></li>
+                    <li><a href="/src/lesson1/01.html">IBM 官网导航条效果</a></li>
+                    <li><a href="/src/lesson1/01.html">面试题-动态生成表格</a></li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll('.accordion__item')
+        const title = document.getElementById('title')
+
+        for (let i = 0; i < items.length; i++) {
+            items[i].onmouseover = () => {
+                title.style.color = 'rgba(79,192,141)'
+                items[i].querySelectorAll('span')[0].style.opacity = 0.7
+                items[i].querySelectorAll('ol')[0].style.transition = 'opacity 1.5s ease-in'
+            }
+
+            items[i].onmouseout = () => {
+                title.style.color = '#f0f0f0'
+                items[i].querySelectorAll('span')[0].style.opacity = 1
+                items[i].querySelectorAll('ol')[0].style.transition = 'opacity 0.3s'
+            }
+        }
+    </script>
 </body>
 
 </html>
