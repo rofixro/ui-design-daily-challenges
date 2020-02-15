@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="/style/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700');
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e7ecea;
+            font-family: 'Raleway', Arial, sans-serif;
+        }
+
+        main {
+            height: 400px;
+            background-color: #fff;
+        }
+
+        ul,
+        li {
+            display: flex;
+        }
+
+        nav li {
+            list-style: none;
+            cursor: pointer;
+            color: #0d9564;
+            font-size: 1.2em;
+            padding: 1em 3em;
+            margin-right: 2em;
+            position: relative;
+            background-color: #2CC185;
+            border-radius: 10px 10px 0 0;
+        }
+
+        nav li:first-child {
+            margin-left: 20px;
+        }
+
+        nav li:last-child {
+            margin-right: 55px;
+        }
+
+        nav li::before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+            border: 4px solid #0d9564;
+        }
+
+        nav li::after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            top: 3px;
+            right: -1.8em;
+            position: absolute;
+            border-style: solid;
+            border-width: 0 2em 3em 0;
+            border-color: #2CC185 transparent;
+        }
+
+        nav .active {
+            color: #2CC185;
+            background-color: #fff;
+        }
+
+        nav .active::before {
+            border: 4px solid #2CC185;
+        }
+
+        nav .active::after {
+            border-color: #fff transparent;
+        }
+
+        main ul {
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main li {
+            display: none;
+            font-size: 8em;
+            font-weight: 900;
+            color: rgba(40, 44, 42, 0.05);
+        }
+
+        main .active {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <article class="tabs">
+        <header>
+            <nav>
+                <ul>
+                    <li class="active">
+                        <span>Home</span>
+                    </li>
+                    <li>
+                        <span>Design</span>
+                    </li>
+                    <li>
+                        <span>Work</span>
+                    </li>
+                    <li>
+                        <span>Portfolio</span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <ul>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </main>
+    </article>
+
+    <script>
+        const headerBtn = document.querySelectorAll("nav li")
+        const mainText = document.querySelectorAll('main li')
+        headerBtn.forEach((item, index) => {
+            item.onclick = () => {
+                headerBtn.forEach((piece, index2) => {
+                    if (piece.className === 'active') {
+                        piece.classList.remove('active')
+                        mainText[index2].style.display = 'none'
+                    }
+                })
+                item.className = 'active'
+                mainText[index].style.display = 'block'
+            }
+        })
+    </script>
+</body>
+
+</html>
