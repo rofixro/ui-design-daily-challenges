@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>swiper</title>
+    <style>
+        .swiper {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .swiper__wrapper {
+            display: flex;
+            position: absolute;
+            top: 0;
+            transition: left 0.6s linear;
+        }
+
+        .item1 {
+            width: 500px;
+            height: 300px;
+            background-color: blueviolet;
+        }
+
+        .item2 {
+            width: 500px;
+            height: 300px;
+            background-color: cadetblue;
+        }
+
+        .item3 {
+            width: 500px;
+            height: 300px;
+            background-color: indianred;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper">
+        <div class="swiper__wrapper" style="left: 0px;">
+            <div class="swiper__item">
+                <div class="item1"></div>
+            </div>
+            <div class="swiper__item">
+                <div class="item2"></div>
+            </div>
+            <div class="swiper__item">
+                <div class="item3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            let dom = document.getElementsByClassName('swiper__wrapper')[0]
+            setInterval(() => {
+                dom.style.left = parseInt(dom.style.left) + -500 + 'px'
+                if (dom.style.left === '-1500px') {
+                    dom.style.left = '0px'
+                }
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
