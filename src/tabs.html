@@ -22,32 +22,32 @@
             display: none;
         }
 
-        input[type="radio"]:checked>.name {
+        input[type="radio"]:checked+.name {
             color: #185ee0;
         }
 
-        input[type="radio"]:checked>.name>.badge {
+        input[type="radio"]:checked+.name>.badge {
             color: #fff;
             background-color: #185ee0;
         }
 
-        input[id="1"]:checked>.active {
+        input[id="1"]:checked~.active {
             transform: translateX(0);
         }
 
-        input[id="2"]:checked>.active {
+        input[id="2"]:checked~.active {
             transform: translateX(100%);
         }
 
-        input[id="3"]:checked>.active {
+        input[id="3"]:checked~.active {
             transform: translateX(200%);
         }
 
         .tabs {
             display: flex;
+            padding: 0.75rem;
             position: relative;
             border-radius: 99px;
-            padding: 0.75rem;
             background-color: #fff;
             box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
         }
@@ -84,11 +84,11 @@
             position: absolute;
             display: flex;
             height: 54px;
-            width: 220px;
+            width: 200px;
             z-index: 1;
             border-radius: 99px;
             background-color: #e6eef9;
-            transition: 0.15s ease-in;
+            transition: 0.25s ease-out;
         }
     </style>
 </head>
