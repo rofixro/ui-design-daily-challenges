@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag</title>
+    <style>
+        body {
+            height: 100vh;
+            position: relative;
+        }
+
+        #piece {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            position: absolute;
+            background-color: rgba(0, 47, 167);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="piece"></div>
+
+    <script>
+        // @@ onmousedown 在当前节点按下鼠标触发的事件
+        piece.onmousedown = (event) => {
+            let shiftX = event.clientX - piece.getBoundingClientRect().left;
+            let shiftY = event.clientY - piece.getBoundingClientRect().top;
+
+            // @@ 将节点中心设置为鼠标点击位置
+            function moveAt(pageX, pageY) {
+                piece.style.left = pageX - shiftX + "px";
+                piece.style.top = pageY - shiftY + "px";
+            }
+
+            // @@ 鼠标移动
+            function onMouseMove(event) {
+                moveAt(event.pageX, event.pageY);
+            }
+
+            // @@ 传入当前鼠标点击位置
+            moveAt(event.pageX, event.pageY)
+
+            // @@ 持续监听鼠标移动事件
+            document.addEventListener("mousemove", onMouseMove);
+
+            // @@ 停止后移除移动事件
+            piece.onmouseup = () => {
+                document.removeEventListener('mousemove', onMouseMove);
+                piece.onmouseup = null;
+            }
+        };
+    </script>
+</body>
+
+</html>
