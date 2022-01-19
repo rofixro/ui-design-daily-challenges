@@ -7,8 +7,8 @@
     <title>Drag</title>
     <style>
         body {
+            margin: 0;
             height: 100vh;
-            position: relative;
         }
 
         #piece {
@@ -25,34 +25,40 @@
     <div id="piece"></div>
 
     <script>
-        // @@ onmousedown 在当前节点按下鼠标触发的事件
-        piece.onmousedown = (event) => {
-            let shiftX = event.clientX - piece.getBoundingClientRect().left;
-            let shiftY = event.clientY - piece.getBoundingClientRect().top;
+        const piece = document.getElementById('piece');
 
-            // @@ 将节点中心设置为鼠标点击位置
-            function moveAt(pageX, pageY) {
-                piece.style.left = pageX - shiftX + "px";
-                piece.style.top = pageY - shiftY + "px";
+        class Darg {
+            constructor(el) {
+                this.el = el;
+                this.init();
             }
 
-            // @@ 鼠标移动
-            function onMouseMove(event) {
-                moveAt(event.pageX, event.pageY);
+            init() {
+                this.el.style.position = 'absolute';
+                this.el.style.zIndex = 1000;
+
+                this.el.onmousedown = (event) => {
+                    this.shiftX = event.clientX - this.el.getBoundingClientRect().left;
+                    this.shiftY = event.clientY - this.el.getBoundingClientRect().top;
+
+                    this.onMouseMove();
+                }
             }
 
-            // @@ 传入当前鼠标点击位置
-            moveAt(event.pageX, event.pageY)
+            onMouseMove() {
+                this.el.onmousemove = (event) => {
+                    this.el.style.top = event.pageY - this.shiftY + 'px';
+                    this.el.style.left = event.pageX - this.shiftX + 'px';
+                }
 
-            // @@ 持续监听鼠标移动事件
-            document.addEventListener("mousemove", onMouseMove);
-
-            // @@ 停止后移除移动事件
-            piece.onmouseup = () => {
-                document.removeEventListener('mousemove', onMouseMove);
-                piece.onmouseup = null;
+                this.el.onmouseup = () => {
+                    this.el.onmousemove = null;
+                    this.el.onmouseup = null;
+                }
             }
-        };
+        }
+
+        new Darg(piece);
     </script>
 </body>
 
