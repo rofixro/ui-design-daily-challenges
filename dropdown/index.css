@@ -1,0 +1,121 @@
+@import "../assets/style/reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  background-color: #edeffb;
+}
+
+.dropdown {
+  width: 570px;
+  padding: 32px;
+  display: flex;
+  color: #11103c;
+  font-style: normal;
+  position: relative;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: #fafaff;
+  font-family: "Poppins", sans-serif;
+}
+
+.dropdown::after {
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  content: "";
+  width: 346px;
+  height: 346px;
+  display: block;
+  position: absolute;
+  border-radius: 30px;
+  margin: -173px 0 0 -173px;
+  background-color: #99a8ff;
+}
+
+.dropdown__options {
+  position: relative;
+}
+
+.dropdown__options:hover .dropdown__options__panel {
+  opacity: 1;
+}
+
+.dropdown__options > .container {
+  padding: 16px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 8px;
+  background: #edeffb;
+}
+
+.dropdown__options > .container img {
+  transition: all 0.5s;
+}
+
+.dropdown__options > .container:hover img {
+  transform: rotate(180deg);
+}
+
+.dropdown__options > .container span {
+  font-size: 16px;
+  color: #11103c;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.dropdown__options__panel {
+  left: 0;
+  right: 0;
+  opacity: 0;
+  padding: 16px;
+  position: absolute;
+  border-radius: 16px;
+  transition: opacity 0.5s;
+  top: calc(100% + 8px);
+  background-color: #fff;
+  box-shadow: 0px 16px 15px rgba(17, 16, 60, 0.1);
+}
+
+.dropdown__options__panel li {
+  cursor: pointer;
+  font-size: 16px;
+  color: #11103c;
+  font-weight: 400;
+  line-height: 24px;
+  border-radius: 8px;
+  padding: 16px 0 16px 16px;
+}
+
+.dropdown__options__panel li:hover {
+  background-color: #edeffb;
+}
+
+.dropdown__search {
+  flex: 1;
+  display: flex;
+  margin-left: 4px;
+}
+
+.dropdown__search > .search {
+  margin: 0 4px 0 16px;
+}
+
+.dropdown__search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 16px 0;
+  font-size: 16px;
+  color: #11103c;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #fafaff;
+}
+
+.dropdown__search input::-webkit-input-placeholder {
+  color: #11103c;
+  font-family: "Poppins", sans-serif;
+}
