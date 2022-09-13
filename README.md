@@ -1,8 +1,7 @@
 ## Web-Design
 ### Made with heart ❤️
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+| Web Kit      | Demo  | Code |
+| :---         | :---: | ---: |
+| Pricing Card | [show](https://ojhaywood.github.io/web-design/pricing-card/)  | [show](https://github.com/ojhaywood/web-design/blob/master/pricing-card/index.html) |
 
 
