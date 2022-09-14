@@ -73,8 +73,8 @@ body {
   padding: 16px;
   position: absolute;
   border-radius: 16px;
-  transition: opacity 0.5s;
   top: calc(100% + 8px);
+  transition: opacity 0.5s;
   background-color: #fff;
   box-shadow: 0px 16px 15px rgba(17, 16, 60, 0.1);
 }
