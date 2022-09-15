@@ -1,6 +1,6 @@
 ## Web Design - HTML/CSS and JavaScript
 
-Design from [UI Design Daily](https://uidesigndaily.com/). Made with heart ❤️
+Design from [UI Design Daily](https://uidesigndaily.com/)
 
 | #     | Components | Live Demo |
 | :---: | :---       | :---:     |
