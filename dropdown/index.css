@@ -16,7 +16,6 @@ body {
   font-style: normal;
   position: relative;
   border-radius: 16px;
-  box-sizing: border-box;
   background-color: #fafaff;
   font-family: "Poppins", sans-serif;
 }

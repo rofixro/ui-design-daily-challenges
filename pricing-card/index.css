@@ -51,7 +51,6 @@ body {
 
 .pricing-card__content {
   padding: 60px;
-  box-sizing: border-box;
 }
 
 .pricing-card__content > .price {
