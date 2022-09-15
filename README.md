@@ -1,5 +1,7 @@
 ## Web Design - HTML/CSS and JavaScript
-Design from [UI Design Daily](https://uidesigndaily.com/).Made with heart ❤️
+
+Design from [UI Design Daily](https://uidesigndaily.com/). Made with heart ❤️
+
 | #     | Components | Live Demo |
 | :---: | :---       | :---:     |
 | 01 | [Pricing Card](https://github.com/ojhaywood/web-design/blob/master/pricing-card/index.html) | [Live Demo](https://ojhaywood.github.io/web-design/pricing-card/) |
@@ -8,5 +10,9 @@ Design from [UI Design Daily](https://uidesigndaily.com/).Made with heart ❤️
 | 04 | [Dropdown](https://github.com/ojhaywood/web-design/blob/master/dropdown/index.html)         | [Live Demo](https://ojhaywood.github.io/web-design/dropdown/)     |
 | 05 | [Notification](https://github.com/ojhaywood/web-design/blob/master/notification/index.html) | [Live Demo](https://ojhaywood.github.io/web-design/notification/) |
 | 06 | [List](https://github.com/ojhaywood/web-design/blob/master/list/index.html)                 | [Live Demo](https://ojhaywood.github.io/web-design/list/)         |
+
 ## License
-The MIT License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2022, OJ Haywood
