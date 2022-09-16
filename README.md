@@ -1,4 +1,4 @@
-## Web Design - HTML/CSS and JavaScript
+## UI Design Daily Challenges - HTML/CSS and JavaScript
 
 Design from [UI Design Daily](https://uidesigndaily.com/)
 
