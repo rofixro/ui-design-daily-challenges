@@ -13,6 +13,7 @@ Challenged to restore one UI design per day, using HTML, CSS and JavaScript. Des
 | 05  | [Notification](https://github.com/ojhaywood/ui-design-daily-challenges/tree/master/notification) | [Live Demo](https://ojhaywood.github.io/ui-design-daily-challenges/notification/) |
 | 06  | [List](https://github.com/ojhaywood/ui-design-daily-challenges/tree/master/list)                 | [Live Demo](https://ojhaywood.github.io/ui-design-daily-challenges/list/)         |
 | 07  | [Job Cards](https://github.com/ojhaywood/ui-design-daily-challenges/tree/master/job-cards)       | [Live Demo](https://ojhaywood.github.io/ui-design-daily-challenges/job-cards/)    |
+| 08  | [Log In](https://github.com/ojhaywood/ui-design-daily-challenges/tree/master/log-in)             | [Live Demo](https://ojhaywood.github.io/ui-design-daily-challenges/log-in/)       |
 
 ## License
 
