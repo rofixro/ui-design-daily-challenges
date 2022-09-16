@@ -1,6 +1,6 @@
 ## UI Design Daily Challenges - HTML/CSS and JavaScript
 
-Design from [UI Design Daily](https://uidesigndaily.com/)
+Challenged to restore one UI design per day, using HTML, CSS and JavaScript. Design from [UI Design Daily](https://uidesigndaily.com/)
 
 | #     | Components | Live Demo |
 | :---: | :---       | :---:     |
