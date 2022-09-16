@@ -1,0 +1,118 @@
+@import "../assets/style/reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+
+body {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  background: #f3f6ff;
+}
+
+#job-cards {
+  width: 1054px;
+  font-style: normal;
+}
+
+#job-cards > h1 {
+  font-size: 32px;
+  color: #1e2246;
+  font-weight: 900;
+  line-height: 40px;
+  text-align: center;
+  font-family: "Merriweather", serif;
+}
+
+#job-cards > .container {
+  display: grid;
+  grid-gap: 32px;
+  margin: 72px 0 60px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#job-cards > .container > .panl {
+  padding: 48px 40px;
+  background: #fff;
+  border-radius: 16px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0px 24px 44px rgba(180, 191, 225, 0.4);
+}
+
+#job-cards > .container > .panl > .header {
+  display: flex;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+#job-cards > .container > .panl > .header > .container {
+  display: flex;
+  align-items: center;
+}
+
+#job-cards > .container > .panl > .header > .container > img {
+  padding: 16px;
+  margin-right: 16px;
+  border-radius: 14px;
+}
+
+.design {
+  background: linear-gradient(131.94deg, #bbcbfb 5.22%, #f1d5ff 100.41%);
+}
+
+.engineering {
+  background: linear-gradient(131.94deg, #fbbbda 5.22%, #ffd5d5 100.41%);
+}
+
+.operations {
+  background: linear-gradient(131.94deg, #bbebfb 5.22%, #efd5ff 100.41%);
+}
+
+.people {
+  background: linear-gradient(131.94deg, #bbfbe4 5.22%, #d5e0ff 100.41%);
+}
+
+.sales {
+  background: linear-gradient(131.94deg, #bbd8fb 5.22%, #ffd5d5 100.41%);
+}
+
+.university {
+  background: linear-gradient(131.94deg, #ffdec7 5.22%, #d5d9ff 100.41%);
+}
+
+#job-cards > .container > .panl > .header > .container > h2 {
+  font-size: 24px;
+  color: #1e2246;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+#job-cards > .container > .panl > button {
+  width: 100%;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #1e2246;
+  line-height: 27px;
+  padding: 16px 24px;
+  background: #fff;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: 1px solid #c2c5e2;
+}
+
+#job-cards > .container > .panl > button:hover {
+  color: #fff;
+  background: #1e2246;
+  border: 1px solid #c2c5e2;
+}
+
+#job-cards > .footer {
+  opacity: 0.7;
+  font-size: 16px;
+  padding: 0 106px;
+  color: #1e2246;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
