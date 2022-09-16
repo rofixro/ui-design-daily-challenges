@@ -1,6 +1,6 @@
 <p align="center"><img width="200" src="./assets/images/logo/uidesigndaily-logo.svg" alt="UI Design Daily logo"></p>
 
-## UI Design Daily Challenges - HTML/CSS and JavaScript
+# UI Design Daily Challenges - HTML/CSS and JavaScript
 
 Challenged to restore one UI design per day, using HTML, CSS and JavaScript. Design from [UI Design Daily](https://uidesigndaily.com/)
 
@@ -15,6 +15,4 @@ Challenged to restore one UI design per day, using HTML, CSS and JavaScript. Des
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT)
-
-Copyright (c) 2022, OJ Haywood
+[MIT](LICENSE) © OJ Haywood
