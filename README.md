@@ -1,4 +1,4 @@
-<p align="center"><img src="./assets/images/logo/uidesigndaily-logo.svg" alt="UI Design Daily logo"></p>
+<p align="center"><img width="200" src="./assets/images/logo/uidesigndaily-logo.svg" alt="UI Design Daily logo"></p>
 
 ## UI Design Daily Challenges - HTML/CSS and JavaScript
 
