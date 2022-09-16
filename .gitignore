@@ -2,6 +2,6 @@
 .DS_Store
 
 # Editor directories
+.idea
 .vscode/*
 !.vscode/extensions.json
-.idea
