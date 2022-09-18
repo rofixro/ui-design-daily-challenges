@@ -9,5 +9,6 @@
 body {
   height: 100vh;
   display: grid;
+  min-height: 1200px;
   place-content: center;
 }
