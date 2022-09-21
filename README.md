@@ -1,12 +1,8 @@
-<p align="center"><img width="200" src="./assets/images/logo/uidesigndaily-logo.svg" alt="UI Design Daily logo"></p>
-
-# UI Design Daily Challenges - HTML/CSS and JavaScript
-
-Challenge [UI Design Daily](https://uidesigndaily.com/) with HTML CSS and JavaScript
+# [UI Design Daily](https://uidesigndaily.com/) Challenges - HTML/CSS and JavaScript
 
 | #   | Level | UI Kit | Live Demo | Live Code |
 | :-: | :-:   | :-     | :-:       | :-:       |
-| 01  | ⭐    | [Log In](https://uidesigndaily.com/posts/figma-log-in-authentication-day-1519) | [Live Demo](https://ojhaywood.github.io/ui-design-daily-challenges/log-in/) | [Live Code](https://github.com/ojhaywood/ui-design-daily-challenges/tree/master/log-in) |
+| 01  | ⭐    | [Log In](https://uidesigndaily.com/posts/figma-timeline-ui-design-card-day-1578) | [Live Demo](https://ojhaywood.github.io/ui-design-daily-challenges/timeline/) | [Live Code](https://github.com/ojhaywood/ui-design-daily-challenges/tree/master/timeline) |
 
 ## License
 

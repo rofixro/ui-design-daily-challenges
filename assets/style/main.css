@@ -1,6 +1,6 @@
 @import "reset.css";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,6 +9,5 @@
 body {
   height: 100vh;
   display: grid;
-  min-height: 1200px;
   place-content: center;
 }

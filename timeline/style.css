@@ -1,0 +1,116 @@
+@import "../assets/style/main.css";
+
+body {
+  background-color: #f7f7fa;
+}
+
+#timeline {
+  width: 628px;
+  padding: 53px;
+  font-style: normal;
+  background: #fff;
+  position: relative;
+  border-radius: 32px;
+  box-shadow: 0px 34px 64px rgba(96, 103, 159, 0.2);
+}
+
+#timeline::after {
+  top: -72px;
+  left: -72px;
+  content: "";
+  z-index: -1;
+  right: 280px;
+  bottom: 308px;
+  display: block;
+  position: absolute;
+  border-radius: 32px;
+  background-color: #60679f;
+}
+
+#timeline > .title {
+  font-size: 32px;
+  color: #10153e;
+  font-weight: 700;
+  line-height: 40px;
+  font-family: "Merriweather", serif;
+}
+
+#timeline > .card {
+  padding: 25px;
+  display: flex;
+  margin: 32px 0;
+  align-items: center;
+  border-radius: 16px;
+  background: #f7f7fa;
+  border: 1px solid #e3e5f1;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+}
+
+#timeline > .card h3 {
+  display: flex;
+  font-size: 14px;
+  color: #60679f;
+  font-weight: 500;
+  line-height: 21px;
+  margin-bottom: 8px;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+#timeline > .card h3 > img {
+  margin-right: 4px;
+}
+
+#timeline > .card p {
+  font-size: 16px;
+  color: #10153e;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#timeline > .list {
+  font-weight: 400;
+  padding-left: 23px;
+  border-left: 1px solid #60679f;
+  font-family: "Poppins", sans-serif;
+}
+
+#timeline > .list li {
+  padding-bottom: 20px;
+}
+
+#timeline > .list h3 {
+  font-size: 16px;
+  color: #10153e;
+  line-height: 24px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+#timeline > .list h3::before {
+  top: 3px;
+  left: -32px;
+  width: 18px;
+  content: "";
+  height: 18px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #f7f7fa;
+  border: 1px solid #60679f;
+}
+
+#timeline > .list li:first-child > h3::before {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  border: 4px solid #60679f;
+}
+
+#timeline > .list p {
+  font-size: 12px;
+  color: #60679f;
+  line-height: 18px;
+}
