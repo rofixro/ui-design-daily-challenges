@@ -70,47 +70,56 @@ body {
 }
 
 #timeline > .list {
-  font-weight: 400;
-  padding-left: 23px;
-  border-left: 1px solid #60679f;
-  font-family: "Poppins", sans-serif;
+  display: flex;
+  position: relative;
+}
+
+#timeline > .list > .line {
+  left: 9px;
+  width: 1px;
+  height: 100%;
+  margin-top: 2px;
+  position: absolute;
+  background-color: #60679f;
+}
+
+#timeline > .list > ul {
+  margin-left: 33px;
 }
 
 #timeline > .list li {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 #timeline > .list h3 {
   font-size: 16px;
+  font-weight: 400;
   color: #10153e;
   line-height: 24px;
   margin-bottom: 8px;
-  position: relative;
 }
 
 #timeline > .list h3::before {
-  top: 3px;
-  left: -32px;
-  width: 18px;
+  left: 0;
   content: "";
-  height: 18px;
+  width: 19px;
+  height: 19px;
   display: block;
-  position: absolute;
+  margin-top: 2px;
   border-radius: 50%;
+  position: absolute;
   box-sizing: border-box;
-  background-color: #f7f7fa;
   border: 1px solid #60679f;
+  background-color: #f7f7fa;
 }
 
-#timeline > .list li:first-child > h3::before {
-  width: 18px;
-  height: 18px;
-  box-sizing: border-box;
+#timeline > .list .active::before {
   border: 4px solid #60679f;
 }
 
 #timeline > .list p {
   font-size: 12px;
+  font-weight: 400;
   color: #60679f;
   line-height: 18px;
 }
