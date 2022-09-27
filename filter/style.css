@@ -1,0 +1,126 @@
+@import "../assets/style/main.css";
+
+body {
+  background-color: #dae0f3;
+}
+
+#filter {
+  width: 419px;
+  font-style: normal;
+  position: relative;
+  border-radius: 24px;
+  padding: 48px 32px 40px;
+  background-color: #fff;
+  box-shadow: 0px 13px 30px rgba(175, 187, 234, 0.4);
+}
+
+#filter::before {
+  top: -24px;
+  left: -24px;
+  content: "";
+  right: 22px;
+  z-index: -1;
+  bottom: 46px;
+  display: flex;
+  position: absolute;
+  border-radius: 24px;
+  background: #ccd5f9;
+}
+
+.filter__tabs ul {
+  display: flex;
+  overflow: hidden;
+  border-radius: 4px;
+  align-items: center;
+  border: 1px solid #dde1f4;
+}
+
+.filter__tabs li {
+  flex: 1;
+  cursor: pointer;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.filter__tabs li:nth-child(2) {
+  border-left: 1px solid #dde1f4;
+  border-right: 1px solid #dde1f4;
+}
+
+.filter__tabs li:nth-child(3) {
+  border-right: 1px solid #dde1f4;
+}
+
+.filter__tabs li img {
+  display: block;
+  margin: 0 auto;
+}
+
+.filter__tabs .active {
+  color: #fff;
+  background-color: #4a6fff;
+}
+
+.filter__tabs .active img {
+  left: 80px;
+  position: relative;
+  filter: drop-shadow(#fff -80px 0);
+}
+
+.filter__search {
+  padding: 16px;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  margin: 24px 0 36px;
+  background: #f2f5ff;
+  border: 1px solid #dde1f4;
+}
+
+.filter__search img {
+  margin-right: 8px;
+}
+
+.filter__search input {
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  font-size: 16px;
+  color: #0f1b4a;
+  line-height: 19px;
+  background-color: #f2f5ff;
+  font-family: "Roboto", sans-serif;
+}
+
+.filter__list li {
+  display: flex;
+  padding: 16px;
+  margin-bottom: 4px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter__list li:hover {
+  border-radius: 4px;
+  background: #f2f5ff;
+}
+
+.filter__list .container {
+  display: flex;
+  font-size: 16px;
+  color: #0f1b4a;
+  line-height: 19px;
+  align-items: center;
+}
+
+.filter__list .container img {
+  margin-right: 8px;
+}
+
+.filter__list .like {
+  cursor: pointer;
+}
