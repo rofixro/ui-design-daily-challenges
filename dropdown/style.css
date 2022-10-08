@@ -1,0 +1,105 @@
+@import '../style/main.css';
+
+body {
+  background-color: #EDEFFB;
+}
+
+.dropdown {
+  padding: 32px;
+  font-size: 16px;
+  color: #11103C;
+  line-height: 24px;
+  font-style: normal;
+  position: relative;
+  border-radius: 16px;
+  background-color: #FAFAFF;
+  font-family: "Poppins", sans-serif;
+}
+
+.dropdown::before {
+  top: -98px;
+  left: 84px;
+  content: "";
+  z-index: -1;
+  right: 140px;
+  bottom: -138px;
+  display: block;
+  position: absolute;
+  border-radius: 30px;
+  background-color: #99A8FF;
+}
+
+.dropdown>.container {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown__select {
+  padding: 16px;
+  margin-right: 4px;
+  border-radius: 8px;
+  position: relative;
+  background-color: #EDEFFB;
+}
+
+.dropdown__select__trigger {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.dropdown__select__trigger:hover+.dropdown__select__panel {
+  display: block;
+}
+
+.dropdown__select__panel {
+  right: 0;
+  left: -7px;
+  padding: 16px;
+  display: none;
+  position: absolute;
+  border-radius: 16px;
+  top: calc(100% + 8px);
+  background-color: #fff;
+  box-shadow: 0px 16px 15px rgba(17, 16, 60, 0.1);
+}
+
+.dropdown__select__panel>li {
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 16px 0 16px 16px;
+}
+
+.dropdown__select__panel>li:hover {
+  background-color: #EDEFFB;
+}
+
+.dropdown__select__panel__item--active {
+  background-color: #EDEFFB;
+}
+
+.dropdown__input {
+  display: flex;
+  align-items: center;
+  padding: 12px 61px 12px 16px;
+}
+
+.dropdown__input>img {
+  margin-right: 4px;
+}
+
+.dropdown__input>input {
+  padding: 0;
+  width: 250px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #11103C;
+  line-height: 24px;
+  background-color: #FAFAFF;
+  font-family: "Poppins", sans-serif;
+}
+
+.dropdown__input>input::placeholder {
+  color: #11103C;
+}
