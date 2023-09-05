@@ -1,11 +1,9 @@
-# [UI Design Daily](https://uidesigndaily.com/) Challenges - HTML/CSS and JavaScript
+# [UI Design Daily](https://uidesigndaily.com/) Challenges - Tailwind CSS
 
-| #   | Level | UI Kit | Live Demo | Live Code |
-| :-: | :-:   | :-     | :-:       | :-:       |
-| 01  | ⭐    | [Timeline](https://uidesigndaily.com/posts/figma-timeline-ui-design-card-day-1578) | [Live Demo](https://ojhaywood.github.io/ui-design-daily-challenges/timeline/) | [Live Code](https://github.com/ojhaywood/ui-design-daily-challenges/tree/master/timeline) |
-| 02  | ⭐    | [Filter](https://uidesigndaily.com/posts/figma-filter-search-list-day-1541) | [Live Demo](https://ojhaywood.github.io/ui-design-daily-challenges/filter/) | [Live Code](https://github.com/ojhaywood/ui-design-daily-challenges/tree/master/filter) |
-| 03  | ⭐    | [Dropdown](https://uidesigndaily.com/posts/figma-dropdown-search-day-1576) | [Live Demo](https://ojhaywood.github.io/ui-design-daily-challenges/dropdown/) | [Live Code](https://github.com/ojhaywood/ui-design-daily-challenges/tree/master/dropdown) |
+| #   | UI Kit | Live Demo | Live Code |
+| :-: | :-     | :-:       | :-:       |
+| 01  | [Enter Password](https://uidesigndaily.com/posts/figma-enter-password-log-in-authentication-card-day-1583) | [Live Demo](https://niyaco.github.io/ui-design-daily-challenges/enter-password) | [Live Code](https://github.com/niyaco/ui-design-daily-challenges/blob/master/enter-password/index.html) |
 
 ## License
 
-[MIT](License) © OJ Haywood
+[MIT](License) © Niyaco
