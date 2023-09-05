@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Password</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="h-screen bg-[#f3f3f9] flex justify-center items-center">
+        <div
+            class="w-[584px] bg-[#fff] rounded-[16px] p-[85px] shadow-[0px_44px_104px_0px_rgba(19,43,80,0.1)] font-['Inter',sans-serif] text-[#132b50]">
+            <h1 class="font-[700] text-[32px] leading-[39px]">Enter your password</h1>
+            <div class="my-[32px] flex items-center">
+                <img class="w-[78px] h-[78px] mr-[16px]" src="./avatar.svg">
+                <dl>
+                    <dt class="font-[500] leading-[17px] mb-[4px]">Business Account</dt>
+                    <dd class="font-[700] text-[18px] leading-[22px]">Sarah Bills</dd>
+                </dl>
+            </div>
+            <form>
+                <label for="password">Password</label>
+                <div>
+                    <div class="flex items-center justify-between m-[8px_0px_32px]">
+                        <div class="w-[371px] border-[1px] border-[#132B50] rounded-[8px] p-[16px] flex items-center">
+                            <img src="./lock.svg">
+                            <input type="password" name="password"
+                                class="outline-none h-[17px] font-['Inter',sans-serif] text-[14px] ml-[10px] placeholder:text-[#132b50]"
+                                placeholder="**************" />
+                        </div>
+                        <div class="visibility cursor-pointer"></div>
+                    </div>
+                    <div class="w-[371px] flex items-center justify-between mb-[40px]">
+                        <div class="flex items-center">
+                            <div class="toggle w-[60px] h-[36px] cursor-pointer"></div>
+                            <p class="font-[600] text-[16px]">Stay signed in</p>
+                        </div>
+                        <div
+                            class="p-[16px] font-[600] text-[16px] text-[#fff] bg-[#132B50] rounded-[8px] cursor-pointer">
+                            Continue
+                        </div>
+                    </div>
+                    <a class="font-[600] text-[16px] underline">Reset password</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../scripts/tailwindcss_3.3.3.js"></script>
+    <script src="../scripts/bodymovin_5.12.2_lottie_svg.min.js"></script>
+    <script>
+        let directionMenuToggle = 1;
+        let directionMenuVisibility = 1;
+        const toggle = document.querySelector('.toggle');
+        const visibility = document.querySelector('.visibility');
+        const animationToggle = bodymovin.loadAnimation({
+            loop: false,
+            renderer: 'svg',
+            autoplay: false,
+            container: toggle,
+            path: "./toggle.json",
+            rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+        });
+        const animationVisibility = bodymovin.loadAnimation({
+            loop: false,
+            renderer: 'svg',
+            autoplay: false,
+            container: visibility,
+            path: "./visibility.json",
+            rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
+        });
+
+        toggle.addEventListener('click', () => {
+            animationToggle.setDirection(directionMenuToggle);
+            animationToggle.play();
+            directionMenuToggle = -directionMenuToggle;
+        });
+
+        visibility.addEventListener('click', () => {
+            animationVisibility.setDirection(directionMenuVisibility);
+            animationVisibility.play();
+            directionMenuVisibility = -directionMenuVisibility;
+        });
+    </script>
+</body>
+
+</html>
